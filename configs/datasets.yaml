@@ -1,0 +1,40 @@
+# Paths are relative to the project root. Download links and notes are in README.md.
+
+cicids2017:
+  format: cic
+  # Use the "GeneratedLabelledFlows" / TrafficLabelling CSVs if you want host-pair sequences
+  # (they contain Source/Destination IP); MachineLearningCVE CSVs also work (no IPs).
+  files: data/CICIDS2017/*.csv
+  # chronological order of files (first matching substring wins; covers morning/afternoon files)
+  file_order: [Monday, Tuesday, Wednesday, Thursday-WorkingHours-Morning, Thursday-WorkingHours-Afternoon,
+               Friday-WorkingHours-Morning, PortScan, DDos]
+  group_cols: [Source IP, Destination IP]                       # ignored if absent
+
+cicids2018:
+  format: cic
+  files: data/CSE-CIC-IDS2018/*.csv
+  file_order: [14-02, 15-02, 16-02, 20-02, 21-02, 22-02, 23-02, 28-02, 01-03, 02-03]
+  group_cols: [Src IP, Dst IP]
+
+unsw_nb15:
+  format: unsw
+  files: [data/UNSW-NB15/UNSW_NB15_training-set.csv, data/UNSW-NB15/UNSW_NB15_testing-set.csv]
+
+nslkdd:
+  format: nsl
+  train: data/NSL-KDD/KDDTrain+.txt
+  test: data/NSL-KDD/KDDTest+.txt
+
+# Example of a NetFlow-v2 dataset (shared schema across UNSW-NB15 / CSE-CIC-IDS2018 / ToN-IoT),
+# needed for cross-dataset tests between datasets that use different feature extractors.
+nf_unsw_nb15_v2:
+  format: generic
+  files: data/NF-UNSW-NB15-v2/*.csv
+  label_col: Attack
+  drop_cols: [IPV4_SRC_ADDR, IPV4_DST_ADDR, Label]
+
+# UNSW-NB15 with the records of each official partition shuffled separately (used for all UNSW-NB15 results in
+# the paper; Section 4.3). run_all.sh creates the files (pandas sample, random_state=0); the loader concatenates them.
+unsw_shuffled:
+  format: unsw
+  files: [data/UNSW-NB15-shuffled/UNSW_NB15_training-set.csv, data/UNSW-NB15-shuffled/UNSW_NB15_testing-set.csv]

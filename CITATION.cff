@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Drift-Aware Deep Intrusion Detection with Class-Balanced Replay for Evolving Network Traffic"
+authors:
+  - family-names: Alkhazaleh
+    given-names: Mohammad
+  - family-names: Baklizi
+    given-names: Mahmoud
+  - family-names: Zghoul
+    given-names: Musab
+  - family-names: AlShaikh Hasan
+    given-names: Mohammad Nazmi
+type: software
+license: MIT

@@ -1,0 +1,14 @@
+# Exact package versions of the Kaggle GPU environment (NVIDIA Tesla T4 x2) used for the experiments of the paper.
+# Recorded on 2026-09-27 from the same notebook image, in a fresh process after `pip install river`
+# (the experiment scripts ran the same way). Python 3.12.13, CUDA 12.8, cuDNN 9.10.2.
+#
+# Install:  pip install -r requirements-lock.txt --extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.10.0
+numpy==2.5.3
+pandas==2.3.3
+scikit-learn==1.6.1
+scipy==1.16.3
+pyyaml==6.0.3
+matplotlib==3.10.0
+river==0.26.1
+pillow==11.3.0
