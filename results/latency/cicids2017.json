@@ -1,0 +1,52 @@
+{
+ "packets_per_flow": 19.754928588867188,
+ "device": "cuda",
+ "aml_ids": {
+  "params_m": 3.816201,
+  "ms_per_flow_b1": 1.7344656780005607,
+  "flows_per_s_b1": 576.5464331083043,
+  "us_per_packet_b1": 87.79913681783755,
+  "packets_per_s_b1": 11389.633614220644,
+  "ms_per_flow_b1024": 0.0412866770702891,
+  "flows_per_s_b1024": 24220.88845507076,
+  "us_per_packet_b1024": 2.0899431189822697,
+  "packets_per_s_b1024": 478481.92178884055,
+  "train_step_gpu_gb": 0.254427136
+ },
+ "cnn_lstm_attn": {
+  "params_m": 0.905993,
+  "ms_per_flow_b1": 1.116201249002188,
+  "flows_per_s_b1": 895.8957902026499,
+  "us_per_packet_b1": 56.50241882581235,
+  "packets_per_s_b1": 17698.357358520087,
+  "ms_per_flow_b1024": 0.01167355695315564,
+  "flows_per_s_b1024": 85663.69308111152,
+  "us_per_packet_b1024": 0.5909187117858895,
+  "packets_per_s_b1024": 1692280.1394759943,
+  "train_step_gpu_gb": 0.0919424
+ },
+ "transformer": {
+  "params_m": 0.542729,
+  "ms_per_flow_b1": 1.2515054720024636,
+  "flows_per_s_b1": 799.0376569428468,
+  "us_per_packet_b1": 63.35155636592605,
+  "packets_per_s_b1": 15784.931852721695,
+  "ms_per_flow_b1024": 0.00788804583983449,
+  "flows_per_s_b1024": 126774.1111429675,
+  "us_per_packet_b1024": 0.3992950824575376,
+  "packets_per_s_b1024": 2504413.512546435,
+  "train_step_gpu_gb": 0.108477952
+ },
+ "mamba": {
+  "params_m": 0.246281,
+  "ms_per_flow_b1": 4.13228987399998,
+  "flows_per_s_b1": 241.99657586751496,
+  "us_per_packet_b1": 209.17766700147504,
+  "packets_per_s_b1": 4780.6250750131385,
+  "ms_per_flow_b1024": 0.02880609863282757,
+  "flows_per_s_b1024": 34714.87106762855,
+  "us_per_packet_b1024": 1.4581727543708325,
+  "packets_per_s_b1024": 685789.7989127336,
+  "train_step_gpu_gb": 0.352697344
+ }
+}
