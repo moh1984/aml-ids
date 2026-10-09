@@ -1,0 +1,9 @@
+data/
+logs/
+results_smoke/
+__pycache__/
+*.pyc
+*.pt
+*.npz
+.ipynb_checkpoints/
+results_preds/
